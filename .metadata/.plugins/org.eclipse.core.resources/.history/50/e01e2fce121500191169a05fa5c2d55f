@@ -1,0 +1,32 @@
+package course;
+
+import java.util.Scanner;
+
+public class Entradadedados2 {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int n1 = sc.nextInt();   // Ler numero
+		sc.nextLine();
+		String name = sc.nextLine();    //ler nome 
+		char gender = sc.next().charAt(0);       //ler apenas um character na primeira posição
+		String s = sc.next();
+		char letter = s.charAt(0);                 // ler apenas a primeiora letra da string
+		int digit = Integer.parseInt (s.substring(1));					// ler o restante da string a partir da posição 1
+		
+		
+		System.out.println(n1);
+		System.out.println(name);
+		System.out.println(gender);
+		System.out.println(letter);
+		System.out.println(digit);
+		
+		
+		sc.close();
+		
+		
+	}
+
+}

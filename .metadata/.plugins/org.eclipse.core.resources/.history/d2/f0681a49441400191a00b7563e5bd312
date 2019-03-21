@@ -1,0 +1,19 @@
+package course;
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		double a;
+		float b;
+		
+		a = 5.0;
+		b = (float) a;
+		
+		System.out.println("esse é o numero",b);
+		
+		
+
+	}
+
+}

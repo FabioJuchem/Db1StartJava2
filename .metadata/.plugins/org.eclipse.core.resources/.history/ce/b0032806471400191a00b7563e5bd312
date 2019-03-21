@@ -1,0 +1,22 @@
+package course;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		char gender = 'F';
+		int age = 32;		
+		double balance = 10.35784;
+		String name = "Maria";
+	
+		  System.out.println("Good Morning");
+		  System.out.println("Good Afternoon");
+		  System.out.println("Good Night");
+		  System.out.println("----------------");
+		  System.out.printf("%.2f",balance);
+		
+		
+
+	}
+
+}

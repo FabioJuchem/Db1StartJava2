@@ -1,0 +1,24 @@
+package course;
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		 int a,b;
+		 double result;
+		 String s = "33";
+		 
+		 a = Integer.parseInt(s);
+		 
+		 result = Double.parseDouble(s);
+		 
+		 
+		 
+		 System.out.println(s);
+		 System.out.println(result);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package course;
+
+public class Exemplooperadores {
+
+	public static void main(String[] args) {
+		 
+		int n1 = 3 + 4 * 2;
+		
+		System.out.println(n1);
+
+	}
+
+}

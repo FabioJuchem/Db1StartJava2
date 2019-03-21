@@ -1,0 +1,18 @@
+package course;
+
+public class Program {
+
+	public static void main(String[] args) {
+	
+		  System.out.print("Good Morning");
+		  System.out.print("Good Afternoon");
+		  System.out.println("Good Afternoon");
+		  System.out.println("Good Night");
+		  System.out.println();
+		 
+		
+		
+
+	}
+
+}

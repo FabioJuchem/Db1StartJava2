@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ExercicioIntegerTeste" project="DB1Start" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.001">
+    <testcase name="deveRetornarSomaDeDoisNumeros" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.001"/>
+    <testcase name="deveRetornarDivisaoDeDoisNumeros" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarSubtracaoDeDoisNumeros" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarSeNumeroEImpar" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarQuantidadeDeImpares" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarSeNumeroEPar" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarNumeroMaior" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+    <testcase name="deveRetornarMultiplicacaoDeDoisNumeros" classname="br.com.db1.db1start.aula2.ExercicioIntegerTeste" time="0.0"/>
+  </testsuite>
+</testrun>
