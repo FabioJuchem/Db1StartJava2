@@ -35,4 +35,46 @@ public class ExercicioStringTeste {
 		Integer resultado = exercicio.quantidadeDeLetras3(" DB1START ");
 		Assert.assertEquals(8, resultado,0);
 	}
+	@Test
+	public void deveRetornarQuatroPrimeirasLetras() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.quatroPrimeirasLetras("Fabio Juchem");
+		Assert.assertEquals("Fabi", resultado);
+	}
+	@Test
+	public void deveRetornarAPartirdaTerceiraLetra() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.aPartirDaTerceiraLetra("Fabio Juchem");
+		Assert.assertEquals("io Juchem", resultado);
+	}
+	@Test
+	public void deveRetornarApenasAsQuatroUltimasLetras() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.apenasAsQuatroUltimasLetras("Fabio Juchem");
+		Assert.assertEquals("chem", resultado);
+	}
+	@Test
+	public void deveRetornarNomeSubstituidoPorAluno() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.substituirNomePorAluno("Fabio Juchem");
+		Assert.assertEquals("Aluno Juchem", resultado);
+	}
+	@Test
+	public void deveRetornarNomesSeparados() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.separarNomes("Banana,Maçã,Melancia");
+		Assert.assertEquals("Banana Maçã Melancia", resultado);
+	}
+	@Test
+	public void deveRetornarQuantasVogaisTemNoTexto() {
+		ExercicioString exercicio = new ExercicioString();
+		Integer resultado = exercicio.quantasVogaistemNoTexto("Forever Young");
+		Assert.assertEquals(5, resultado,0);
+	}
+	@Test
+	public void deveRetornarTextoInvertido() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.textoInvertido("Forever Young");
+		Assert.assertEquals("gnuoY reveroF", resultado);
+	}
 }

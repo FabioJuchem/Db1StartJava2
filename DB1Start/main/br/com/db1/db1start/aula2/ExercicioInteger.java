@@ -41,7 +41,7 @@ public class ExercicioInteger {
 	}
 	public Integer numeroDeImpares (Integer numero1){
 		Integer contador = 0;
-		for(int i = numero1; i <=100; i++){
+		for(int i = numero1; i <=100; i++) {
 			if(i % 2 != 0){
 				contador++;
 			}

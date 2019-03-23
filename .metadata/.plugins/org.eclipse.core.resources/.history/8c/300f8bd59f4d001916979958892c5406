@@ -1,0 +1,44 @@
+package br.com.db1.db1start.aula2;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ExercicioStringTeste {
+	@Test
+	public void deveRetornarMaiusculo() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.upper("fabio");
+		Assert.assertEquals("FABIO", resultado);
+	}
+
+	@Test
+	public void deveRetornarMinusculo() {
+		ExercicioString exercicio = new ExercicioString();
+		String resultado = exercicio.lower("FABIO");
+		Assert.assertEquals("fabio", resultado);
+	}
+	@Test
+	public void deveRetornarQuantDeLetras1() {
+		ExercicioString exercicio = new ExercicioString();
+		Integer resultado = exercicio.quantidadeDeLetras1("DB1START");
+		Assert.assertEquals(8, resultado,0);
+	}
+	@Test
+	public void deveRetornarQuantDeLetras2() {
+		ExercicioString exercicio = new ExercicioString();
+		Integer resultado = exercicio.quantidadeDeLetras2(" DB1START ");
+		Assert.assertEquals(10, resultado,0);
+	}
+	@Test
+	public void deveRetornarQuantDeLetras3() {
+		ExercicioString exercicio = new ExercicioString();
+		Integer resultado = exercicio.quantidadeDeLetras3(" DB1START ");
+		Assert.assertEquals(8, resultado,0);
+	}
+	@Test
+	public void deveDeveRetornarQuatroPrimeirasLetras() {
+		ExercicioString exercicio = new ExercicioString();
+		Integer resultado = exercicio.quatroPrimeirasLetras("Fabio Juchem");
+		Assert.assertEquals("Fabi", resultado);;
+	}
+}

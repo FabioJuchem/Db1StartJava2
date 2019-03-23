@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ExercicioStringTeste" project="DB1Start" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0">
-    <testcase name="deveRetornarMinusculo" classname="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0"/>
-    <testcase name="deveRetornarQuantDeLetras1" classname="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0"/>
-    <testcase name="deveRetornarQuantDeLetras2" classname="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0"/>
-    <testcase name="deveRetornarQuantDeLetras3" classname="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0"/>
-    <testcase name="deveRetornarMaiusculo" classname="br.com.db1.db1start.aula2.ExercicioStringTeste" time="0.0"/>
-  </testsuite>
-</testrun>

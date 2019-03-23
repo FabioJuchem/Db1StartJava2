@@ -1,0 +1,61 @@
+package br.com.db1.db1start.aula2;
+
+public class ExercicioDouble {
+	
+	public static double menorValor(double value1,double value2){
+		double menor;
+		if(value1 < value2){
+			menor = value1;
+		}else{
+			menor = value2;
+		}
+		return menor;
+	}
+	
+	public static Double menor(double value1,double value2,double value3)
+	{
+		
+		if(value1 < value2 && value1 < value3)
+		{
+			return value1;
+		}
+		else if(value2 < value1 && value2 < value3)
+		{
+			return value2;
+		}
+		else
+		{
+			return value3;
+		}
+	}
+	
+	public static void main(String[] args){
+		
+		Double value1 = 251.0;
+		Double value2 = 159.0;
+		Double value3 = 52.0;
+		
+		
+		if(value1 < value2 && value1 < value3)
+		{
+			System.out.println("Valor  ["+ value1 +"] É Menor");
+		}
+		else if(value2 < value1 && value2 < value3)
+		{
+			System.out.println("Valor  ["+ value2 +"] É Menor");
+		}
+		else
+		{
+			System.out.println("Valor  ["+ value3 +"] É Menor");
+		}
+		
+		System.out.println("--------------------------------");
+		
+		Double menorDedois = menorValor(value1,value2);
+		Double menor = menor(value1, value2, value3);
+		System.out.println("Valor ["+ menor +"] É Menor de três");
+		System.out.println("Valor ["+ menorDedois +"] É Menor de dois");
+	
+	}
+
+}
