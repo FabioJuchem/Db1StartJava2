@@ -59,6 +59,10 @@ public class ExercicioString {
 		return texto;
 	}
 	
-	
+	public static void main(String[] args){
+		
+		ExercicioString result = new ExercicioString();
+		System.out.println(result.textoInvertido("Forever Young"));
+	}
 
 }
