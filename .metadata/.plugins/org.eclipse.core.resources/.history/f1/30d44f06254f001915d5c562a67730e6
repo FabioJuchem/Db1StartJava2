@@ -1,0 +1,54 @@
+package br.com.db1.db1start.aula2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ExerciciosAula11 {
+	
+	public List<String> cores(){
+		List<String> cores = new ArrayList<>();
+		
+		cores.add("Azul");
+		cores.add("Amarelo");
+		cores.add("Branco");
+		return cores;
+	}
+	
+	public Integer quantidadeDeItens(){
+		List<String> itens = new ArrayList<>();
+		
+		itens.add("Paçoca");
+		itens.add("Pamonha");
+		itens.add("Pipoca");
+		itens.add("Pastel");
+		
+		return itens.size();
+		
+	}
+	
+	public List<String> removerSegundaPosicao(String item1,String item2, String item3){
+		List<String> itens = new ArrayList<>();
+		itens.add(item1);
+		itens.add(item2);
+		itens.add(item3);
+		itens.remove(1);
+		return itens;
+		
+		}
+		
+		
+	
+	
+	
+	
+	
+	public static  void main (String[] args){
+		ExerciciosAula11 testes = new ExerciciosAula11();
+		testes.quantidadeDeItens();
+		System.out.println(testes);
+	}
+	
+	
+	
+
+}

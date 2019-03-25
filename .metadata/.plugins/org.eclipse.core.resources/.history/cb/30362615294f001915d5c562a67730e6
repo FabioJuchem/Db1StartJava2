@@ -1,0 +1,69 @@
+package br.com.db1.db1start.aula2;
+
+import java.util.List;
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ExerciciosAula11Teste {
+	
+	@Test
+	public void deveRetornarListaDeNomes(){
+		
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		
+		List<String> cores = aula11.cores();
+		
+		Assert.assertEquals("Azul", cores.get(0));
+		Assert.assertEquals("Amarelo", cores.get(1));
+		Assert.assertEquals("Branco", cores.get(2));
+		
+	}
+	@Test
+	public void deveRetornarQuantidadeDeItens(){
+		
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		
+		Integer itens = aula11.quantidadeDeItens();
+		
+		Assert.assertEquals(4,itens,0);
+		
+		
+		}
+	@Test
+	public void deveRetornarStringsEmUmaLista(){
+		
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		
+		List<String> itens = aula11.removerSegundaPosicao("Nome", "Nome1", "Nome2");
+		
+		Assert.assertEquals("Nome", itens.get(0));
+		Assert.assertEquals("Nome2", itens.get(1));
+		
+		}
+	@Test
+	public void deveRetornarExercicio1Ordenado(){
+		
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		
+		List<String> itens = aula11.coresDoExercicio1Ordenados();
+		
+		Assert.assertEquals("Amarelo", itens.get(0));
+		Assert.assertEquals("Azul", itens.get(1));
+		Assert.assertEquals("Branco", itens.get(2));
+		
+		}
+	@Test
+	public void deveRetornarCoresQueMaisGostoRemovendoUma(){
+		
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		
+		List<String> itens = aula11.coresQueMaisGosto();
+		
+		Assert.assertEquals("Azul", itens.get(0));
+		Assert.assertEquals("Branco", itens.get(1));
+		
+		}
+	
+	
+
+}
