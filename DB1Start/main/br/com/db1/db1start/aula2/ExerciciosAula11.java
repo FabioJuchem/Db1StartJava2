@@ -71,31 +71,159 @@ public class ExerciciosAula11 {
 		List<Integer> impar = new ArrayList<>();
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
 		List<Integer> numeros = new ArrayList<>();
+
 		numeros.add(1);
 		numeros.add(2);
 		numeros.add(3);
 		numeros.add(4);
 		numeros.add(5);
 		numeros.add(6);
-		for (int i = 0; i <= numeros.size(); i++) {
-			Integer aux = numeros.get(i);
-			if (aux % 2 == 0) {
-				par.add(aux);
-				
+		for (int i = 0; i < numeros.size(); i++) {
+			if (numeros.get(i) % 2 == 0) {
+				par.add(numeros.get(i));
+
 			} else {
-				impar.add(aux);
+				impar.add(numeros.get(i));
 			}
 		}
-		list.add(0, par);
-		list.add(1,impar);
-		return list;
+		list.add(par);
+		list.add(impar);
 
+		return list;
+	}
+
+	public List<List<String>> listaDeNomesOrdenados() {
+		List<String> nomes = new ArrayList<>();
+		List<List<String>> listaNomes = new ArrayList<List<String>>();
+		nomes.add("ANA");
+		nomes.add("ANA LAURA");
+		nomes.add("JOSE");
+		nomes.add("WAGNER");
+		nomes.add("RODOLFO");
+		nomes.add("ROBERVAL");
+		nomes.add("RODOLPHO");
+		nomes.add("VAGNER");
+		nomes.add("JOSÉ");
+		nomes.add("JOALDO");
+		nomes.add("CLECIO");
+		nomes.add("MARIA");
+		nomes.add("MARCOS");
+		List<String> letraA = new ArrayList<>();
+		List<String> letraJ = new ArrayList<>();
+		List<String> letraR = new ArrayList<>();
+		List<String> letraV = new ArrayList<>();
+		List<String> letraC = new ArrayList<>();
+		List<String> letraM = new ArrayList<>();
+		List<String> letraW = new ArrayList<>();
+
+		for (int i = 0; i < nomes.size(); i++) {
+			if (nomes.get(i).charAt(0) == 'A') {
+				letraA.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'J') {
+				letraJ.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'R') {
+				letraR.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'V') {
+				letraV.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'C') {
+				letraC.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'M') {
+				letraM.add(nomes.get(i));
+			} else if (nomes.get(i).charAt(0) == 'W') {
+				letraW.add(nomes.get(i));
+			}
+
+		}
+		Collections.sort(letraA);
+		Collections.sort(letraJ);
+		Collections.sort(letraR);
+		Collections.sort(letraV);
+		Collections.sort(letraC);
+		Collections.sort(letraM);
+		Collections.sort(letraW);
+		
+		listaNomes.add(letraA);
+		listaNomes.add(letraJ);
+		listaNomes.add(letraR);
+		listaNomes.add(letraV);
+		listaNomes.add(letraC);
+		listaNomes.add(letraM);
+		listaNomes.add(letraW);
+		return listaNomes;
+
+	}
+
+	public Integer ListaIntegerRetornarSoma() {
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
+		return lista.get(0) + lista.get(1);
+	}
+
+	public Double ListaIntegerRetornarMediaDeDouble() {
+		List<Double> lista = new ArrayList<>();
+		lista.add(10.0);
+		lista.add(20.0);
+		lista.add(30.0);
+		Double media = (lista.get(0) + lista.get(1) + lista.get(2)) / 3;
+		return media;
+	}
+
+	public Integer ListaIntegerRetornarMenorValor() {
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
+		if (lista.get(0) < lista.get(1)) {
+			return lista.get(0);
+		} else {
+			return lista.get(1);
+		}
+
+	}
+
+	public Integer ListaIntegerRetornarMaiorValor() {
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
+		if (lista.get(0) > lista.get(1)) {
+			return lista.get(0);
+		} else {
+			return lista.get(1);
+		}
+
+	}
+
+	public List<Integer> ListaIntegerRetirarImpares() {
+		List<Integer> lista = new ArrayList<>();
+		lista.add(1);
+		lista.add(2);
+		lista.add(3);
+		lista.add(4);
+		for (int i = 0; i < lista.size(); i++)
+			if (lista.get(i) % 2 != 0) {
+				lista.remove(i);
+			}
+		return lista;
+
+	}
+
+	public List<Character> retornarTodasVogais() {
+		String frase = "esta e uma frase";
+		List<Character> vogais = new ArrayList<>();
+		for (int i = 0; i < frase.length(); i++) {
+			char letra = frase.charAt(i);
+			if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+				vogais.add(letra);
+			}
+		}
+		return vogais;
 	}
 
 	public static void main(String[] args) {
 		ExerciciosAula11 testes = new ExerciciosAula11();
-		testes.listasDeParesEImpares();
-		System.out.println(testes.listasDeParesEImpares());
+		testes.listaDeNomesOrdenados();
+		System.out.print(testes.listaDeNomesOrdenados());
+
 	}
 
 }
