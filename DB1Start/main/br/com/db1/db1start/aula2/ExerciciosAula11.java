@@ -2,7 +2,9 @@ package br.com.db1.db1start.aula2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ExerciciosAula11 {
 
@@ -18,7 +20,7 @@ public class ExerciciosAula11 {
 	public Integer quantidadeDeItens() {
 		List<String> itens = new ArrayList<>();
 
-		itens.add("Paçoca");
+		itens.add("PaÃ§oca");
 		itens.add("Pamonha");
 		itens.add("Pipoca");
 		itens.add("Pastel");
@@ -66,92 +68,41 @@ public class ExerciciosAula11 {
 		return lista;
 	}
 
-	public List<List<Integer>> listasDeParesEImpares() {
+	public List<List<Integer>> listasDeParesEImpares(List<Integer> numeros) {
 		List<Integer> par = new ArrayList<>();
 		List<Integer> impar = new ArrayList<>();
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
-		List<Integer> numeros = new ArrayList<>();
 
-		numeros.add(1);
-		numeros.add(2);
-		numeros.add(3);
-		numeros.add(4);
-		numeros.add(5);
-		numeros.add(6);
 		for (int i = 0; i < numeros.size(); i++) {
-			if (numeros.get(i) % 2 == 0) {
-				par.add(numeros.get(i));
+			Integer aux = numeros.get(i);
+			if (aux % 2 == 0) {
+				par.add(aux);
 
 			} else {
-				impar.add(numeros.get(i));
+				impar.add(aux);
 			}
 		}
-		list.add(par);
-		list.add(impar);
-
+		list.add(0, par);
+		list.add(1, impar);
 		return list;
+
 	}
 
-	public List<List<String>> listaDeNomesOrdenados() {
-		List<String> nomes = new ArrayList<>();
-		List<List<String>> listaNomes = new ArrayList<List<String>>();
-		nomes.add("ANA");
-		nomes.add("ANA LAURA");
-		nomes.add("JOSE");
-		nomes.add("WAGNER");
-		nomes.add("RODOLFO");
-		nomes.add("ROBERVAL");
-		nomes.add("RODOLPHO");
-		nomes.add("VAGNER");
-		nomes.add("JOSÉ");
-		nomes.add("JOALDO");
-		nomes.add("CLECIO");
-		nomes.add("MARIA");
-		nomes.add("MARCOS");
-		List<String> letraA = new ArrayList<>();
-		List<String> letraJ = new ArrayList<>();
-		List<String> letraR = new ArrayList<>();
-		List<String> letraV = new ArrayList<>();
-		List<String> letraC = new ArrayList<>();
-		List<String> letraM = new ArrayList<>();
-		List<String> letraW = new ArrayList<>();
-
-		for (int i = 0; i < nomes.size(); i++) {
-			if (nomes.get(i).charAt(0) == 'A') {
-				letraA.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'J') {
-				letraJ.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'R') {
-				letraR.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'V') {
-				letraV.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'C') {
-				letraC.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'M') {
-				letraM.add(nomes.get(i));
-			} else if (nomes.get(i).charAt(0) == 'W') {
-				letraW.add(nomes.get(i));
-			}
-
-		}
-		Collections.sort(letraA);
-		Collections.sort(letraJ);
-		Collections.sort(letraR);
-		Collections.sort(letraV);
-		Collections.sort(letraC);
-		Collections.sort(letraM);
-		Collections.sort(letraW);
+	public Map<String, List<String>> dividirPalavrasMap(List<String> nomes) {
+		Map<String, List<String>> retorno = new HashMap<>();
+		Collections.sort(nomes);
 		
-		listaNomes.add(letraA);
-		listaNomes.add(letraJ);
-		listaNomes.add(letraR);
-		listaNomes.add(letraV);
-		listaNomes.add(letraC);
-		listaNomes.add(letraM);
-		listaNomes.add(letraW);
-		return listaNomes;
-
+		for(String value : nomes){
+			String letra = value.substring(0,1);
+			
+			if(!retorno.containsKey(letra)){
+				retorno.put(letra, new ArrayList<String>());
+			}
+			retorno.get(letra).add(value);
+		}
+		return retorno;
 	}
+	
 
 	public Integer ListaIntegerRetornarSoma() {
 		List<Integer> lista = new ArrayList<>();
@@ -221,9 +172,12 @@ public class ExerciciosAula11 {
 
 	public static void main(String[] args) {
 		ExerciciosAula11 testes = new ExerciciosAula11();
-		testes.listaDeNomesOrdenados();
-		System.out.print(testes.listaDeNomesOrdenados());
+		List<String> nomes = new ArrayList<>();
+		nomes.add("Andre");
+		nomes.add("Jose");
+		testes.dividirPalavrasMap(nomes);
+		System.out.print(testes.dividirPalavrasMap(nomes));
 
 	}
 
-}
+	}
