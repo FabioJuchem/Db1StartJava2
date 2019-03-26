@@ -13,8 +13,12 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarListaDeNomes() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<String> coresPref = new ArrayList<>();
+		coresPref.add("Azul");
+		coresPref.add("Amarelo");
+		coresPref.add("Branco");
 
-		List<String> cores = aula11.cores();
+		List<String> cores = aula11.cores(coresPref);
 
 		Assert.assertEquals("Azul", cores.get(0));
 		Assert.assertEquals("Amarelo", cores.get(1));
@@ -27,9 +31,15 @@ public class ExerciciosAula11Teste {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
 
-		Integer itens = aula11.quantidadeDeItens();
-
-		Assert.assertEquals(4, itens, 0);
+		List<String> itens = new ArrayList<>();
+		itens.add("Paçoca");
+		itens.add("Pamonha");
+		itens.add("Pipoca");
+		itens.add("Pastel");
+		
+		Integer quant = aula11.quantidadeDeItens(itens);
+		
+		Assert.assertEquals(4, quant, 0);
 
 	}
 
@@ -37,11 +47,12 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarStringsEmUmaLista() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<String> itens = new ArrayList<>();
 
-		List<String> itens = aula11.removerSegundaPosicao("Nome", "Nome1", "Nome2");
+		itens = aula11.coresQueMaisGostoRemovendoSegunda("Azul", "Amarelo");
 
-		Assert.assertEquals("Nome", itens.get(0));
-		Assert.assertEquals("Nome2", itens.get(1));
+		Assert.assertEquals("Azul", itens.get(0));
+		
 
 	}
 
@@ -49,8 +60,14 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarExercicio1Ordenado() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<String> itens = new ArrayList<>();
+		itens.add("Amarelo");
+		itens.add("Azul");
+		itens.add("Branco");
 
-		List<String> itens = aula11.coresDoExercicio1Ordenados();
+		itens = aula11.coresDoExercicio1Ordenados(itens);
+
+	
 
 		Assert.assertEquals("Amarelo", itens.get(0));
 		Assert.assertEquals("Azul", itens.get(1));
@@ -58,24 +75,18 @@ public class ExerciciosAula11Teste {
 
 	}
 
-	@Test
-	public void deveRetornarCoresQueMaisGostoRemovendoUma() {
-
-		ExerciciosAula11 aula11 = new ExerciciosAula11();
-
-		List<String> itens = aula11.coresQueMaisGosto();
-
-		Assert.assertEquals("Azul", itens.get(0));
-		Assert.assertEquals("Branco", itens.get(1));
-
-	}
-
+	
 	@Test
 	public void deveRetornarListaDeFormaDecrescente() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<String> lista = new ArrayList<>();
 
-		List<String> itens = aula11.listaOrdenadadeFormaDescrescente();
+		lista.add("Matrix");
+		lista.add("Neo");
+		lista.add("Trinity");
+
+		List<String> itens = aula11.listaOrdenadadeFormaDescrescente(lista);
 
 		Assert.assertEquals("Trinity", itens.get(0));
 		Assert.assertEquals("Neo", itens.get(1));
@@ -118,8 +129,11 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarSoma() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
 
-		Integer itens = aula11.ListaIntegerRetornarSoma();
+		Integer itens = aula11.ListaIntegerRetornarSoma(lista);
 
 		Assert.assertEquals(30, itens, 0);
 
@@ -129,8 +143,12 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarMedia() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<Double> lista = new ArrayList<>();
+		lista.add(10.0);
+		lista.add(20.0);
+		lista.add(30.0);
 
-		Double itens = aula11.ListaIntegerRetornarMediaDeDouble();
+		Double itens = aula11.ListaIntegerRetornarMediaDeDouble(lista);
 
 		Assert.assertEquals(20.0, itens, 0);
 
@@ -140,8 +158,11 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarMenorValor() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
 
-		Integer itens = aula11.ListaIntegerRetornarMenorValor();
+		Integer itens = aula11.ListaIntegerRetornarMenorValor(lista);
 
 		Assert.assertEquals(10, itens, 0);
 
@@ -151,8 +172,11 @@ public class ExerciciosAula11Teste {
 	public void deveRetornarMaiorValor() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<Integer> lista = new ArrayList<>();
+		lista.add(10);
+		lista.add(20);
 
-		Integer itens = aula11.ListaIntegerRetornarMaiorValor();
+		Integer itens = aula11.ListaIntegerRetornarMaiorValor(lista);
 
 		Assert.assertEquals(20, itens, 0);
 
@@ -162,8 +186,13 @@ public class ExerciciosAula11Teste {
 	public void deveRetirarNumerosImpares() {
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<Integer> lista = new ArrayList<>();
+		lista.add(1);
+		lista.add(2);
+		lista.add(3);
+		lista.add(4);
 
-		List<Integer> itens = aula11.ListaIntegerRetirarImpares();
+		List<Integer> itens = aula11.ListaIntegerRetirarImpares(lista);
 
 		Assert.assertEquals(2, itens.get(0), 0);
 		Assert.assertEquals(4, itens.get(1), 0);
@@ -172,10 +201,11 @@ public class ExerciciosAula11Teste {
 
 	@Test
 	public void deveRetornarTodasAsVogais() {
+		String frase = "esta e uma frase";
 
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
 
-		List<Character> itens = aula11.retornarTodasVogais();
+		List<Character> itens = aula11.retornarTodasVogais(frase);
 
 		Assert.assertEquals('e', itens.get(0), 0);
 		Assert.assertEquals('a', itens.get(1), 0);
