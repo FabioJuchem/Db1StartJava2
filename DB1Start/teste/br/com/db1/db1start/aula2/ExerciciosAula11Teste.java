@@ -1,6 +1,9 @@
 package br.com.db1.db1start.aula2;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -80,15 +83,36 @@ public class ExerciciosAula11Teste {
 
 	}
 
-	/*@Test
+	@Test
 	public void deveRetornarListaDeListaDeParesEImpares() {
-
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
-
-		List<List<Integer>> itens = aula11.listasDeParesEImpares();
-
 		
-	}*/
+		
+		List<Integer> numeros = new ArrayList<>();
+		numeros.add(1);
+		numeros.add(2);
+		numeros.add(3);
+		numeros.add(4);
+		
+		List<List<Integer>> retorno = aula11.listasDeParesEImpares(numeros);
+		
+		Assert.assertEquals(4, numeros.size());
+		
+		List<Integer> pares = retorno.get(0);
+		List<Integer> impares = retorno.get(1);
+		
+		Assert.assertEquals(2, pares.size());
+		Assert.assertEquals(2, impares.size());
+		
+		Assert.assertEquals(2, pares.get(0), 0);
+		Assert.assertEquals(4, pares.get(1), 0);
+		
+		Assert.assertEquals(1, impares.get(0), 0);
+		Assert.assertEquals(3, impares.get(1), 0);
+		
+		
+		
+	}
 
 	@Test
 	public void deveRetornarSoma() {
@@ -161,6 +185,21 @@ public class ExerciciosAula11Teste {
 		Assert.assertEquals('a', itens.get(5), 0);
 		Assert.assertEquals('e', itens.get(6), 0);
 
+	}
+	@Test
+	public void deveRetornarListaSeparadaMap() {
+		ExerciciosAula11 aula11 = new ExerciciosAula11();
+		List<String> palavras = new ArrayList<>();
+		
+		palavras.add("Maiko");
+		palavras.add("Ana");
+
+		
+		Map<String, List<String>> retorno = aula11.dividirPalavrasMap(palavras); 
+		
+		Assert.assertEquals(2, retorno.size());
+		Assert.assertEquals("Ana", retorno.get("A").get(0));
+		Assert.assertEquals("Maiko", retorno.get("M").get(0));
 	}
 
 }
