@@ -221,15 +221,39 @@ public class ExerciciosAula11Teste {
 		ExerciciosAula11 aula11 = new ExerciciosAula11();
 		List<String> palavras = new ArrayList<>();
 		
-		palavras.add("Maiko");
-		palavras.add("Ana");
+		palavras.add("ANA");
+		palavras.add("ANA LAURA");
+		palavras.add("JOSE");
+		palavras.add("WAGNER");
+		palavras.add("RODOLFO");
+		palavras.add("ROBERVAL");
+		palavras.add("RODOLPHO");
+		palavras.add("VAGNER");
+		palavras.add("JOSÉ");
+		palavras.add("JOALDO");
+		palavras.add("CLECIO");
+		palavras.add("JOSÉ");
+		palavras.add("MARIA");
+		palavras.add("MARCOS");
 
 		
 		Map<String, List<String>> retorno = aula11.dividirPalavrasMap(palavras); 
 		
-		Assert.assertEquals(2, retorno.size());
-		Assert.assertEquals("Ana", retorno.get("A").get(0));
-		Assert.assertEquals("Maiko", retorno.get("M").get(0));
+		Assert.assertEquals(7, retorno.size());
+		Assert.assertEquals("ANA", retorno.get("A").get(0));
+		Assert.assertEquals("ANA LAURA", retorno.get("A").get(1));
+		Assert.assertEquals("JOSE", retorno.get("J").get(1));
+		Assert.assertEquals("WAGNER", retorno.get("W").get(0));
+		Assert.assertEquals("RODOLFO", retorno.get("R").get(1));
+		Assert.assertEquals("ROBERVAL", retorno.get("R").get(0));
+		Assert.assertEquals("RODOLPHO", retorno.get("R").get(2));
+		Assert.assertEquals("VAGNER", retorno.get("V").get(0));
+		Assert.assertEquals("JOSÉ", retorno.get("J").get(2));
+		Assert.assertEquals("JOALDO", retorno.get("J").get(0));
+		Assert.assertEquals("CLECIO", retorno.get("C").get(0));
+		Assert.assertEquals("JOSÉ", retorno.get("J").get(3));
+		Assert.assertEquals("MARIA", retorno.get("M").get(1));
+		Assert.assertEquals("MARCOS", retorno.get("M").get(0));
 	}
 
 }
